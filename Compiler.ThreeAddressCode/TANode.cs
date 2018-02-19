@@ -58,6 +58,44 @@ namespace Compiler.ThreeAddressCode
         public GenName(string name) { Name = name; }
     }
 
+    /// <summary>
+    /// Наследник унарной операции
+    /// </summary>
+    public class UnaryTANode : TAExpr
+    {
+        public TAExpr Num { get; set; }
+        public char Operation { get; set; }
+        public string Result { get; set; }
+        public UnaryTANode(TAExpr num, char op, string res)
+        {
+            Num = num;
+            Operation = op;
+            Result = res;
+        }
+    }
+
+    /// <summary>
+    /// Наследник бинарной операции
+    /// </summary>
+    public class BinaryTANode : TAExpr
+    {
+        public TAExpr Left { get; set; }
+        public TAExpr Right { get; set; }
+        public string Operation { get; set; }
+        public string Result { get; set; }
+        public BinaryTANode(TAExpr left, TAExpr right, string op, string res)
+        {
+            Left = left;
+            Right = right;
+            Operation = op;
+            Result = res;
+
+        }
+
+    }
+
+
+
     /*
      * =========================================================
      * Код программы храниться в виде команд 
