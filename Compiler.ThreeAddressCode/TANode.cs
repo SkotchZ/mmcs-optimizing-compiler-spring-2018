@@ -15,15 +15,18 @@ namespace Compiler.ThreeAddressCode
      * =========================================================
     */
 
-    /// <summary>
-    /// Базовый класс для трехадресного кода
-    /// </summary>
-    public abstract class TANode
-    {
+    /*
         public abstract TAExpr Left { get; set; }
         public abstract TAExpr Right { get; set; }
         public abstract TAExpr Result { get; set; }
         public abstract string Operation { get; set; }
+    */
+
+    /// <summary>
+    /// Базовый класс для трехадресного кода
+    /// </summary>
+    public class TANode
+    {
     }
 
     /*
